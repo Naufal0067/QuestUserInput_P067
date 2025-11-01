@@ -56,5 +56,12 @@ fun FormDataDiri(modifier: Modifier = Modifier.fillMaxSize()) {
         stringResource(R.string.jk_perempuan)
     )
 
+    val statusKawinOptions: List<String> = listOf(
+        stringResource(R.string.sk_janda),
+        stringResource(R.string.sk_lajang),
+        stringResource(R.string.sk_duda)
+    )
+
+
 
 }
