@@ -47,4 +47,5 @@ import androidx.compose.foundation.verticalScroll
 fun FormDataDiri(modifier: Modifier = Modifier.fillMaxSize()) {
 
     var textNama by remember { mutableStateOf("") }
-
+    var textAlamat by remember { mutableStateOf("") }
+}
