@@ -99,7 +99,21 @@ fun FormDataDiri(modifier: Modifier = Modifier.fillMaxSize()) {
             Text(text = stringResource(R.string.label_nama_lengkap),
                 fontWeight = FontWeight.Bold,
                 fontSize = 14.sp)
-
+            OutlinedTextField(
+                value = textNama,
+                singleLine = true,
+                shape = MaterialTheme.shapes.small,
+                modifier = Modifier.fillMaxWidth(),
+                placeholder = { Text(text = stringResource(R.string.placeholder_nama)) },
+                onValueChange = { textNama = it },
+                colors = TextFieldDefaults.colors(
+                    focusedContainerColor = Color.Transparent,
+                    unfocusedContainerColor = Color.Transparent,
+                    focusedIndicatorColor = MaterialTheme.colorScheme.primary,
+                    unfocusedIndicatorColor = Color.Gray,
+                    cursorColor = MaterialTheme.colorScheme.primary
+                )
+            )
 
         }
 
