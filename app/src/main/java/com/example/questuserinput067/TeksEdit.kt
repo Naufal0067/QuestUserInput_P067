@@ -69,6 +69,11 @@ fun FormDataDiri(modifier: Modifier = Modifier.fillMaxSize()) {
                     titleContentColor = Color.White,
                     navigationIconContentColor = Color.White
                 ),
+                title = {
+                    Text(text = stringResource(R.string.label_form_title),
+                        fontWeight = FontWeight.SemiBold,
+                        fontSize = 20.sp)
+                },
 
     )
 
