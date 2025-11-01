@@ -114,6 +114,7 @@ fun FormDataDiri(modifier: Modifier = Modifier.fillMaxSize()) {
                     cursorColor = MaterialTheme.colorScheme.primary
                 )
             )
+            Spacer(modifier = Modifier.height(8.dp))
 
         }
 
