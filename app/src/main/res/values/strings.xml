@@ -11,6 +11,6 @@
     <string name="sk_janda">Janda</string>
     <string name="sk_lajang">Lajang</string>
     <string name="sk_duda">Duda</string>
-
-
-    </resources>
+    <string name="label_alamat">ALAMAT</string>
+    <string name="placeholder_alamat">Alamat</string>
+</resources>
