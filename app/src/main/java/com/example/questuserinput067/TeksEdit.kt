@@ -74,7 +74,16 @@ fun FormDataDiri(modifier: Modifier = Modifier.fillMaxSize()) {
                         fontWeight = FontWeight.SemiBold,
                         fontSize = 20.sp)
                 },
-
+                navigationIcon = {
+                    IconButton(onClick = {  }) {
+                        Icon(
+                            imageVector = Icons.Filled.ArrowBack,
+                            contentDescription = "Back"
+                        )
+                    }
+                }
+            )
+        }
     )
 
 
