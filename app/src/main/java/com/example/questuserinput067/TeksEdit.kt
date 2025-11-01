@@ -45,6 +45,7 @@ import androidx.compose.foundation.verticalScroll
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun FormDataDiri(modifier: Modifier = Modifier.fillMaxSize()) {
+    val scrollState = rememberScrollState()
 
     var textNama by remember { mutableStateOf("") }
     var textAlamat by remember { mutableStateOf("") }
@@ -91,6 +92,7 @@ fun FormDataDiri(modifier: Modifier = Modifier.fillMaxSize()) {
             modifier = modifier
                 .fillMaxSize()
                 .padding(innerPadding)
+                .verticalScroll(scrollState)
                 .padding(horizontal = 20.dp, vertical = 16.dp),
             verticalArrangement = Arrangement.spacedBy(16.dp),
             horizontalAlignment = Alignment.Start
