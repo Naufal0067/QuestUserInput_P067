@@ -70,12 +70,14 @@ fun FormDataDiri(modifier: Modifier = Modifier.fillMaxSize()) {
                     navigationIconContentColor = Color.White
                 ),
                 title = {
-                    Text(text = stringResource(R.string.label_form_title),
+                    Text(
+                        text = stringResource(R.string.label_form_title),
                         fontWeight = FontWeight.SemiBold,
-                        fontSize = 20.sp)
+                        fontSize = 20.sp
+                    )
                 },
                 navigationIcon = {
-                    IconButton(onClick = {  }) {
+                    IconButton(onClick = { }) {
                         Icon(
                             imageVector = Icons.Filled.ArrowBack,
                             contentDescription = "Back"
@@ -84,7 +86,7 @@ fun FormDataDiri(modifier: Modifier = Modifier.fillMaxSize()) {
                 }
             )
         }
-    ) {innerPadding ->
+    ) { innerPadding ->
         Column(
             modifier = modifier
                 .fillMaxSize()
@@ -94,7 +96,14 @@ fun FormDataDiri(modifier: Modifier = Modifier.fillMaxSize()) {
             verticalArrangement = Arrangement.spacedBy(16.dp),
             horizontalAlignment = Alignment.Start
         ) {
-
+            Text(text = stringResource(R.string.label_nama_lengkap),
+                fontWeight = FontWeight.Bold,
+                fontSize = 14.sp)
 
 
         }
+
+
+    }
+}
+
