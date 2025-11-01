@@ -51,4 +51,10 @@ fun FormDataDiri(modifier: Modifier = Modifier.fillMaxSize()) {
     var textJK by remember { mutableStateOf("") }
     var textStatusKawin by remember { mutableStateOf("") }
 
+    val genderOptions: List<String> = listOf(
+        stringResource(R.string.jk_laki_laki),
+        stringResource(R.string.jk_perempuan)
+    )
+
+
 }
