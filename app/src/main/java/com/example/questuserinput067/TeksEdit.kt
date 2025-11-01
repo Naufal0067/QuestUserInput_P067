@@ -96,9 +96,11 @@ fun FormDataDiri(modifier: Modifier = Modifier.fillMaxSize()) {
             verticalArrangement = Arrangement.spacedBy(16.dp),
             horizontalAlignment = Alignment.Start
         ) {
-            Text(text = stringResource(R.string.label_nama_lengkap),
+            Text(
+                text = stringResource(R.string.label_nama_lengkap),
                 fontWeight = FontWeight.Bold,
-                fontSize = 14.sp)
+                fontSize = 14.sp
+            )
             OutlinedTextField(
                 value = textNama,
                 singleLine = true,
@@ -116,9 +118,22 @@ fun FormDataDiri(modifier: Modifier = Modifier.fillMaxSize()) {
             )
             Spacer(modifier = Modifier.height(8.dp))
 
+            Text(
+                text = stringResource(R.string.label_jenis_kelamin),
+                fontWeight = FontWeight.Bold,
+                fontSize = 14.sp
+            )
+            Column(
+                modifier = Modifier
+                    .fillMaxWidth()
+                    .selectableGroup(),
+                verticalArrangement = Arrangement.spacedBy(4.dp)
+            ) {
+
+
+            }
+
         }
-
-
     }
 }
 
