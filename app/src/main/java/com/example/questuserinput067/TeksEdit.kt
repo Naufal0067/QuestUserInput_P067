@@ -84,7 +84,17 @@ fun FormDataDiri(modifier: Modifier = Modifier.fillMaxSize()) {
                 }
             )
         }
-    )
+    ) {innerPadding ->
+        Column(
+            modifier = modifier
+                .fillMaxSize()
+                .padding(innerPadding)
+                .verticalScroll(scrollState)
+                .padding(horizontal = 20.dp, vertical = 16.dp),
+            verticalArrangement = Arrangement.spacedBy(16.dp),
+            horizontalAlignment = Alignment.Start
+        ) {
 
 
-}
+
+        }
