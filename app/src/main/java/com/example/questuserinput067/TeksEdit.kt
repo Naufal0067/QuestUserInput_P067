@@ -49,5 +49,6 @@ fun FormDataDiri(modifier: Modifier = Modifier.fillMaxSize()) {
     var textNama by remember { mutableStateOf("") }
     var textAlamat by remember { mutableStateOf("") }
     var textJK by remember { mutableStateOf("") }
+    var textStatusKawin by remember { mutableStateOf("") }
 
 }
