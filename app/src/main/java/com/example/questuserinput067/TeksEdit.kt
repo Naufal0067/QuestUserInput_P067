@@ -61,7 +61,16 @@ fun FormDataDiri(modifier: Modifier = Modifier.fillMaxSize()) {
         stringResource(R.string.sk_lajang),
         stringResource(R.string.sk_duda)
     )
+    Scaffold(
+        topBar = {
+            TopAppBar(
+                colors = TopAppBarDefaults.topAppBarColors(
+                    containerColor = Color(0xFFD0BCFF),
+                    titleContentColor = Color.White,
+                    navigationIconContentColor = Color.White
+                ),
 
+    )
 
 
 }
