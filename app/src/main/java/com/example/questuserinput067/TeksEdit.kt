@@ -91,7 +91,6 @@ fun FormDataDiri(modifier: Modifier = Modifier.fillMaxSize()) {
             modifier = modifier
                 .fillMaxSize()
                 .padding(innerPadding)
-                .verticalScroll(scrollState)
                 .padding(horizontal = 20.dp, vertical = 16.dp),
             verticalArrangement = Arrangement.spacedBy(16.dp),
             horizontalAlignment = Alignment.Start
@@ -149,8 +148,76 @@ fun FormDataDiri(modifier: Modifier = Modifier.fillMaxSize()) {
                 }
 
             }
+            Spacer(modifier = Modifier.height(8.dp))
 
+            Text(text = stringResource(R.string.label_status_kawin),
+                fontWeight = FontWeight.Bold,
+                fontSize = 14.sp)
+            Column(modifier = Modifier
+                .fillMaxWidth()
+                .selectableGroup(),
+                verticalArrangement = Arrangement.spacedBy(4.dp)
+            ) {
+                statusKawinOptions.forEach { item ->
+                    Row(
+                        modifier = Modifier
+                            .fillMaxWidth()
+                            .selectable(
+                                selected = textStatusKawin == item,
+                                onClick = { textStatusKawin = item },
+                                role = Role.RadioButton
+                            ),
+                        verticalAlignment = Alignment.CenterVertically
+                    ) {
+                        RadioButton(
+                            selected = textStatusKawin == item,
+                            onClick = { textStatusKawin = item }
+                        )
+                        Text(item)
+                    }
+                }
+            }
+
+            Spacer(modifier = Modifier.height(8.dp))
+
+            Text(text = stringResource(R.string.label_alamat),
+                fontWeight = FontWeight.Bold,
+                fontSize = 14.sp)
+            OutlinedTextField(
+                value = textAlamat,
+                singleLine = true,
+                shape = MaterialTheme.shapes.small,
+                modifier = Modifier.fillMaxWidth(),
+                placeholder = { Text(text = stringResource(R.string.placeholder_alamat)) },
+                onValueChange = { textAlamat = it },
+                colors = TextFieldDefaults.colors(
+                    focusedContainerColor = Color.Transparent,
+                    unfocusedContainerColor = Color.Transparent,
+                    focusedIndicatorColor = MaterialTheme.colorScheme.primary,
+                    unfocusedIndicatorColor = Color.Gray,
+                    cursorColor = MaterialTheme.colorScheme.primary
+                )
+            )
+
+            Spacer(modifier = Modifier.height(24.dp))
+
+            Button(
+                modifier = Modifier.fillMaxWidth(),
+                enabled = textNama.isNotEmpty() && textJK.isNotEmpty() && textStatusKawin.isNotEmpty() && textAlamat.isNotEmpty(),
+                onClick = {
+                    println("Data disubmit!")
+                },
+                shape = MaterialTheme.shapes.small,
+                colors = ButtonDefaults.buttonColors(
+                    containerColor = MaterialTheme.colorScheme.primary
+                )
+            ) {
+                Text(text = stringResource(R.string.submit),
+                    fontSize = 16.sp,
+                    fontWeight = FontWeight.SemiBold,
+                    modifier = Modifier.padding(vertical = 4.dp)
+                )
+            }
         }
     }
 }
-
